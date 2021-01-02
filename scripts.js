@@ -28,7 +28,7 @@ if ('pictureInPictureEnabled' in document){ // here it's checking without click 
                 }
             }
         }else{
-            alert("REFRESH THE PAGE AND SELECT THE MEDIA TO SHARE OR THE SCREEN");
+            displayMedia();
         }
     });
     
