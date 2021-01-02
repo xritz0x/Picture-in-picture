@@ -8,6 +8,7 @@ const displayMedia = async () => {
     } 
 }
 if ('pictureInPictureEnabled' in document){ // here it's checking without click event on the button
+    displayMedia();
     button.disabled = false;
     button.style.display = "block";
     button.addEventListener('click',async () => {
@@ -31,8 +32,9 @@ if ('pictureInPictureEnabled' in document){ // here it's checking without click 
         }
     });
     
+}else{
+    alert('your browser doesn\'t support PICTURE IN PICTURE');
 }
-displayMedia();
 
 video.addEventListener('enterpictureinpicture', () => {
     button.textContent = 'Exit Picture-in-Picture mode';
